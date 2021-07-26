@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movieish</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+    </head>
+    <body>
+      <div class="container">
+        <nav class="navbar navbar-expand-md text-rise bg-white">
+          <a class="navbar-brand" class="" href="/"><i class="fa fa-film fa-lg" aria-hidden="true"></i>  Movieish</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-hamburger-rise"><i class="fa fa-bars" aria-hidden="true"></i></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <% if(page != "home"){ %>
+                <form class="form-inline mx-auto" action="/results" method= "GET">
+                    <div class="input-group mr-md-2">
+                      <input class="form-control" id="my-search" type="search" placeholder="search movie" aria-label="Search" name="search">
+                      <div class="input-group-append">
+                        <button class="btn btn-nav-search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      </div>
+                    </div>
+                </form>
+              <% } %>
+            <ul class="navbar-nav">
+              <% if(page !== "favorites"){ %>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/favorites">Naman's Favorite Movies<span class="sr-only">(current)</span></a>
+                </li>
+              <% } else { %>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/favorites">Naman's Favorite Movies<span class="sr-only">(current)</span></a>
+                  </li>
+              <% } %>
+            </ul>
+          </div>
+        </nav>
+        

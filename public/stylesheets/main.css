@@ -1,0 +1,285 @@
+/* General Styles */
+
+html, body{
+    height: 100%;
+    font-family:'Source Sans Pro', sans-serif;
+    background-color: #fff;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+
+.bg-light-gray {
+    background-color: #F5F7FA;
+}
+
+.bg-rise {
+	background-color: #FC6E51;
+}
+.text-rise {
+	color: #FC6E51;
+}
+
+.text-rise a {
+	color: #AAB2BD;
+}
+.text-rise a:hover {
+	color: #E9573F;
+}
+
+btn-rise {
+    background-color: #FC6E51;
+    border-color: #FC6E51;
+    
+}
+
+btn-rise:hover {
+    background-color: #E9573F;
+    border-color: #E9573F;
+}
+
+.make-center{
+    margin-left: 10px;
+    margin-right: -5px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-width: 1px 0 1px 1px;
+    border-color: #ced4da;
+}
+
+.box-shadow {
+     box-shadow: 5px 6.5px 8px #888888;
+ }
+
+/* Navbar section */
+
+
+.trans-bar{
+  background: rgba(0, 0, 0, 0.7);;
+  border-radius:0;
+  border:none;
+}
+
+.welcome .text-rise a {
+	color: #F5F7FA;
+}
+.welcome .text-rise a:hover {
+	color: #E9573F;
+}
+
+.welcome a.navbar-brand:hover {
+    color: #F5F7FA;
+}
+
+a.navbar-brand:hover {
+    color: #FC6E51;
+    font-weight: 600;
+}
+
+a.navbar-brand {
+    color: #FC6E51;
+    font-weight: 600;
+}
+
+.btn-nav-search {
+    background-color: #E6E9ED;
+    border-style: solid;
+    border-color: #ced4da;
+    border-width: 1px 1px 1px 0;
+}
+
+.navbar-toggler-hamburger {
+   color: #F5F7FA;
+}
+
+.navbar-toggler-hamburger-rise {
+    color: #FC6E51;
+}
+
+.navbar-brand {
+    font-size: 20px;
+}
+.navbar-nav li {
+    font-size : 18px;
+}
+
+#my-search {
+    background-color: #E6E9ED;
+    max-width: 415px;
+}
+
+/* Search page */
+/* ========================================= */
+
+/* Welcome Hero */
+
+.welcome {
+    width: 100%;
+    height:100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/movie-actor-collage.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.btn-search {
+    border-width: 1px 1px 1px 0;
+    background-color: #fff;
+}
+
+
+.jumbotron h1 {
+    font-size: 2.25rem;
+}
+
+.jumbotron {
+    margin-top: 20px;
+    background-color: transparent;
+    color: #e9e9e5;
+    min-width: 350px;
+}
+
+
+/* Favorites and Results page */
+/* ========================================= */
+
+.card-deck.poster-tile {
+    max-width: 200px;
+    
+}
+
+.card-deck.poster-tile img{
+    max-height: 240px;
+    min-height: 228.750px;
+    cursor: pointer;
+}
+
+/* Movie Detail Modals */
+
+.modal-content {
+    background-color: #ececec;
+    padding: 5px 0;
+}
+ .modal-content {
+     
+     max-height: 100%;
+ }
+ 
+ .modal-body {
+     padding: 5px 2px;
+ }
+ 
+ .modal-body div.row {
+     margin: 0;
+ }
+
+.poster {
+    margin: auto;
+}
+
+.poster img {
+    display: block;
+}
+
+.overview {
+ padding-left: 18px;
+ padding-right: 0;
+ position: relative;
+ overflow-y: scroll;
+ height: 380px;
+}
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    /*.movie-search {*/
+    /*    max-width: 75%;*/
+    /*}*/
+    
+    .jumbotron h1{
+        font-size: 2.5rem;
+    }
+    
+    .jumbotron {
+        min-width: 400px;
+        padding: 32px;
+    }
+    
+    .card-deck.poster-tile {
+    max-width: 342px;
+    }
+    .card-deck.poster-tile img{
+    /*height: 301px;*/
+    max-height: 400px;
+    }
+    
+    .modal-content {
+         min-width: 550px;
+         max-height: 400px;
+     }
+ 
+     .modal-dialog.modal-dialog-centered {
+         max-width: 550px;
+     }
+     #my-search {
+         min-width: 415px;
+         max-width: 415px;    
+     }
+     
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .jumbotron h1{
+        font-size: 3rem;
+    }
+    .jumbotron{
+        min-width: 500px;
+    }
+    #my-search {
+        min-width: 250px;
+    }
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .jumbotron{
+        min-width: 700px;
+    }
+    .jumbotron h1{
+        font-size: 3.25rem;
+    }
+    
+     .movie-search {
+        max-width: 75%;
+    }
+    
+    #my-search {
+    width: 400px;
+    }
+    
+    .navbar-brand {
+    font-size: 24px;
+    }
+    .navbar-nav li {
+        font-size : 20px;
+    }
+    
+
+}

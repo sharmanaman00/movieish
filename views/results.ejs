@@ -1,0 +1,53 @@
+<%  include ./partials/header-main %>
+
+<div class="container" style="margin-top: 100px">
+  <h3 class="text-left">Showing movie results for "<%= query %> "</h1>
+  <hr>
+</div>
+
+<div class="row make-center">
+    <% data["results"].forEach(function(movie){ %>
+    <div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 30px">
+         <div class="card-deck poster-tile">
+          <div class="card" style="border: 0">
+            <img data-toggle="modal" data-target="#movieModalCenter<%=movie["id"]%>" class="card-img-top" src="http://image.tmdb.org/t/p/w342<%=movie["poster_path"]%>" alt="Card image cap">
+          </div>
+        </div>    
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="movieModalCenter<%=movie["id"]%>" tabindex="-1" role="dialog" aria-labelledby="movieModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <!--<div class="modal-header">-->
+          <!--  <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+          <!--    <span aria-hidden="true">&times;</span>-->
+          <!--  </button>-->
+          <!--</div>-->
+          <div class="modal-body">
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="row">
+              <div class="col-12 col-sm-6 poster">
+                <img src="http://image.tmdb.org/t/p/w342<%=movie["poster_path"]%>" style="max-width: 220px; margin: 0 auto">
+              </div>
+              <div class="col-12 col-sm-6 overview">
+                <h4 class="modal-title" id="exampleModalLongTitle"><strong><%= movie["title"] %></strong></h4>
+                <p class="card-text"><small class="badge badge-warning">Release Date: <%= movie["release_date"].substr(0,4) %></small></p>
+                <p class="card-text"><%=movie["overview"]%></p>
+              </div>
+            </div>
+          </div>
+          <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+          <!--  <button type="button" class="btn btn-warning">Play Trailer</button>-->
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+
+    <% }) %> 
+</div>
+
+<%  include ./partials/footer %>
